@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "types": ["vitest/globals"]
+  },
+  "include": ["src/**/*.ts", "eslint.config.js", "vite.config.ts", "tests/**/*.ts"],
+  "exclude": ["node_modules"]
+}
