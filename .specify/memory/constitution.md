@@ -2,17 +2,16 @@
 ---
 Sync Impact Report
 ---
-Version change: none → 1.0.0
-Modified principles: n/a (initial creation)
-Added sections:
-  - 核心原则
-  - 治理
-Added principles:
-  - I. 统一包管理
-  - II. 现代化构建体系
-  - III. 技术决策的时效性
-  - IV. 规范化依赖管理
-  - V. 中文优先原则
+Version change: 1.0.0 → 1.1.0
+Modified principles:
+  - Added: VI. 代码规范自动化
+Added sections: n/a
+Removed sections: n/a
+Templates requiring updates:
+  - ✅ .specify/templates/plan-template.md (no changes needed)
+  - ✅ .specify/templates/spec-template.md (no changes needed)
+  - ✅ .specify/templates/tasks-template.md (no changes needed)
+Follow-up TODOs: none
 -->
 # workhorse-cli 技术规约
 
@@ -33,6 +32,9 @@ Added principles:
 ### V. 中文优先原则
 所有项目内的代码注释、文档、提交信息（commit messages）以及与项目相关的团队交流都必须优先使用中文。这旨在降低团队成员之间的沟通和理解成本，确保信息传达的准确性。
 
+### VI. 代码规范自动化
+项目必须集成 `ESLint` 来进行静态代码分析和风格检查。所有代码提交前都应通过 ESLint 的校验，以确保代码质量、风格统一，并尽早发现潜在的错误。
+
 ## 治理
 本规约是项目开发的最高准则，其效力高于所有其他实践或个人偏好。对本规约的任何修订都必须经过团队评审，并以更新版本号的形式记录在案。
 
@@ -43,4 +45,4 @@ Added principles:
   - **修订号 (PATCH)**: 当进行文字修正、格式调整或澄清性说明时。
 - **合规性**: 所有的代码提交和审查都必须以遵守本规约为前提。
 
-**版本**: 1.0.0 | **批准日期**: 2025-09-23 | **最后修订日期**: 2025-09-23
+**版本**: 1.1.0 | **批准日期**: 2025-09-23 | **最后修订日期**: 2025-09-23
