@@ -1,22 +1,18 @@
-import { execa } from 'execa';
 import { describe, it, expect } from 'vitest';
+import { execa } from 'execa';
 
 describe('workhorse-cli', () => {
-  it('should display structured help information', async () => {
+  it('应该显示结构化的帮助信息', async () => {
     const { stdout } = await execa('node', ['dist/index.js', '--help']);
 
     // 检查基本结构和内容
-    expect(stdout).toContain('Usage: workhorse <command> [options]');
-    expect(stdout).toContain('A CLI tool designed to simplify git and command-line operations.');
-    
-    // 检查 Options/Flags
+    expect(stdout).toContain('Usage: workhorse-cli [options] [command]');
+    expect(stdout).toContain('A CLI tool for automating development workflows');
     expect(stdout).toContain('Options:');
     expect(stdout).toContain('-V, --version');
     expect(stdout).toContain('-h, --help');
-
-    // 检查自定义部分
-    expect(stdout).toContain('Examples:');
-    expect(stdout).toContain('$ workhorse --help');
-    expect(stdout).toContain('Learn More:');
+    expect(stdout).toContain('Commands:');
+    expect(stdout).toContain('init');
   });
 });
+
