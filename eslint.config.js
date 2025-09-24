@@ -11,8 +11,9 @@ export default tseslint.config(
         tsconfigRootDir: import.meta.dirname,
       },
     },
+    files: ['src/**/*.ts'],
   },
   {
-    ignores: ['dist'],
+    ignores: ['dist', 'coverage', 'tests', '*.config.js', '*.config.ts'],
   }
 );
